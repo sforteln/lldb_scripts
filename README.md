@@ -1,10 +1,15 @@
 # LLDB scripts
 
 ## Installation
+#### adding to .lldb
 1. Clone the repo
-1. copy the .lldb file to your home dir or copy its contents to an existing .lldb file
+1. copy the .lldbinit file to your home dir or copy its contents to an existing .lldb file
+1. restart lldb/xcode
 
-###OR
+#### Manually import into lldb or xcode(from the lldb prompt in the debugger window)
+
+
+    command script import ~/git/lldb_scripts/frame_utils.py
 
 
 
