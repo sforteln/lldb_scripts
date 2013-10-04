@@ -21,3 +21,4 @@ command regex rd 's/^[[:space:]]*$/po [[[UIApplication sharedApplication] keyWin
 
 # add in pythin based custom commands
 command script import ~/LLDB/frame_utils.py
+command script import ~/LLDB/capture_output.py
