@@ -12,7 +12,7 @@
 
 
     command script import ~/git/lldb_scripts/frame_utils.py
-
+    command script import ~/git/lldb_scripts/capture_output.py
 
 
 ## frame utils
@@ -29,7 +29,7 @@
     -i --index int(default=0) the index of the frame in the stack to print.  The current frame is zero
     -p --prefix string(default="") a string to prefix all log messages with
 
-####Example:
+####Example :
     Given a stack that looks like this. With the 0 frame being the current frame. 
     
     frame #0: -[ViewController loadView]
@@ -48,4 +48,26 @@
 
     Called by -[UIViewController loadViewIfRequired]
 
-  
+## Capture output
+
+### Copy to paste buffer/cpb
+    This fucntion copies the output from a debugger command into the paste buffer
+
+####Usage : 
+    cpb po self
+
+####Example :
+    cpb po @"test"
+
+    copies 'test' into you copy buffer
+
+### write_to_file/wf
+    The function writes the ersult of the passed in debugger function into the passed in file
+
+#### Usage :
+    wf -f /tmp/lldb_cmds -c 'po self'
+    -f the file tio write the result to
+    -c the debugger command wrapped in single quotes('po self')
+
+
+
