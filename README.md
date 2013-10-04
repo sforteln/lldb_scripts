@@ -50,7 +50,7 @@
 
 ## Capture output
 
-### Copy to paste buffer/cpb
+### copy_to_paste_buffer/cpb
     This fucntion copies the output from a debugger command into the paste buffer
 
 ####Usage : 
@@ -62,7 +62,7 @@
     copies 'test' into you copy buffer
 
 ### write_to_file/wf
-    The function writes the ersult of the passed in debugger function into the passed in file
+    The function writes the result of the passed in debugger function into the passed in file
 
 #### Usage :
     wf -f /tmp/lldb_cmds -c 'po self'
