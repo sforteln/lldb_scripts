@@ -1,12 +1,14 @@
-# prints the passed in data as stringWithFormat: would
-# usage ps @"the time is %@", [NSDate date]
+# prints the passed in data as [NSString stringWithFormat:..] would
+# usage: 
+#  ps @"the time is %@", [NSDate date]
 #
 # from http://www.cimgf.com/2012/12/13/xcode-lldb-tutorial/
 command regex print_string 's/^(.+)$/po [[NSString alloc] initWithFormat:%1]/'
 command alias ps print_string
 
 # Prints the passed in data as NSLog would including the timestamp
-# usage ns_log @"the time is %@", [NSDate date]
+# usage:
+#  ns_log @"the time is %@", [NSDate date]
 #
 # from http://www.raywenderlich.com/28289/debugging-ios-apps-in-xcode-4-5
 # note a log command already exists
@@ -14,11 +16,14 @@ command regex ns_log 's/^(.+)$/expr (void)NSLog(%1)/'
 command alias nsl ns_log
 
 # print the view hierarchy from a view or the root window(noarg passed)
-# usage rd self.view or rd <no arg>
+# usage:
+#  rd self.view 
+# or 
+#  rd 
 #
 # from http://nshipster.com/reader-submissions-new-years-2013/
 command regex rd 's/^[[:space:]]*$/po [[[UIApplication sharedApplication] keyWindow] recursiveDescription]/' 's/^(.+)$/po [%1 recursiveDescription]/'
 
-# add in pythin based custom commands
+# add in python based custom commands
 command script import ~/LLDB/frame_utils.py
 command script import ~/LLDB/capture_output.py
