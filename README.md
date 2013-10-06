@@ -1,6 +1,7 @@
 # LLDB scripts
 
 ## Installation
+---
 #### adding to .lldbinit
 (this will allow you to have access to the commands everytime you start xcode without having to manually import them each time)
 
@@ -15,8 +16,8 @@
     command script import ~/git/lldb_scripts/capture_output.py
 
 
-## frame utils
-
+## Frame utils
+---
 ### print_stack_frame/psf
   This function prints the class and function for a frame from the current stack.  This 
   allows you to log a frame from the stack that is not the current frame.  So you could 
@@ -49,7 +50,7 @@
     Called by -[UIViewController loadViewIfRequired]
 
 ## Capture output
-
+---
 ### copy_to_paste_buffer/cpb
     This fucntion copies the output from a debugger command into the paste buffer
 
@@ -62,7 +63,7 @@
     copies 'test' into you copy buffer
 
 ### write_to_file/wf
-    The function writes the result of the passed in debugger function into the passed in file
+    The function writes the result of the passed in debugger function into the passed in file.  If the passed in command does not begin with po or p then 'po' will be prepended to the passed in commnd.
 
 ##### Usage :
     wf -f /tmp/lldb_cmds -c 'po self'
@@ -70,10 +71,8 @@
     -c the debugger command wrapped in single quotes('po self')
 
 ### view_in_xcode/vx
-    The function writes the ersult of the passed in debugger function into the passed in file
+    The function writes the result of the passed in debugger function into a temp file and opens it in xcode. If the passed in command does not begin with po or p then 'po' will be prepended to the passed in commnd.
 
 ##### Usage :
-    wf -f /tmp/lldb_cmds -c 'po self'
-    -f the file tio write the result to
-    -c the debugger command wrapped in single quotes('po self')
+    vx json
 
