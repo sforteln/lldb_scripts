@@ -50,7 +50,7 @@
 
 ## Capture output
 
-### Copy to paste buffer/cpb
+### copy_to_paste_buffer/cpb
     This fucntion copies the output from a debugger command into the paste buffer
 
 #####Usage : 
