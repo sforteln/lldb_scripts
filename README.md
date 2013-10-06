@@ -23,13 +23,13 @@
   see what called the method that is at the top of the stack witj
     psf -i 1 -p "called by "  
   
-####Usage :
+#####Usage :
     
     psf -i 2 -p "stop called by "
     -i --index int(default=0) the index of the frame in the stack to print.  The current frame is zero
     -p --prefix string(default="") a string to prefix all log messages with
 
-####Example :
+#####Example :
     Given a stack that looks like this. With the 0 frame being the current frame. 
     
     frame #0: -[ViewController loadView]
@@ -53,21 +53,27 @@
 ### Copy to paste buffer/cpb
     This fucntion copies the output from a debugger command into the paste buffer
 
-####Usage : 
+#####Usage : 
     cpb po self
 
-####Example :
+#####Example :
     cpb po @"test"
 
     copies 'test' into you copy buffer
 
 ### write_to_file/wf
-    The function writes the ersult of the passed in debugger function into the passed in file
+    The function writes the result of the passed in debugger function into the passed in file
 
-#### Usage :
+##### Usage :
     wf -f /tmp/lldb_cmds -c 'po self'
     -f the file tio write the result to
     -c the debugger command wrapped in single quotes('po self')
 
+### view_in_xcode/vx
+    The function writes the ersult of the passed in debugger function into the passed in file
 
+##### Usage :
+    wf -f /tmp/lldb_cmds -c 'po self'
+    -f the file tio write the result to
+    -c the debugger command wrapped in single quotes('po self')
 
