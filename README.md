@@ -19,9 +19,7 @@
 ## Frame utils
 ---
 ### print_stack_frame/psf
-  This function prints the class and function for a frame from the current stack.  This 
-  allows you to log a frame from the stack that is not the current frame.  So you could 
-  see what called the method that is at the top of the stack witj
+This function prints the class and function for a frame from the current stack.  This allows you to log a frame from the stack that is not the current frame.  So you could see what called the method that is at the top of the stack witj
     psf -i 1 -p "called by "  
   
 #####Usage :
@@ -42,7 +40,7 @@
     frame #6: -[UIWindow makeKeyAndVisible]
 
 #####Calling 
-   The debugger command can be called from either the lldb prompt or in a xcode breakpoint by using the 'Debugger command' action.
+The debugger command can be called from either the lldb prompt or in a xcode breakpoint by  using the 'Debugger command' action.
     
     psf -i 1 -p "Called by "
 #####yields
@@ -52,7 +50,7 @@
 ## Capture output
 ---
 ### copy_to_paste_buffer/cpb
-    This fucntion copies the output from a debugger command into the paste buffer
+This fucntion copies the output from a debugger command into the paste buffer
 
 #####Usage : 
     cpb po self
@@ -63,7 +61,7 @@
     copies 'test' into you copy buffer
 
 ### write_to_file/wf
-    The function writes the result of the passed in debugger function into the passed in file.  If the passed in command does not begin with po or p then 'po' will be prepended to the passed in commnd.
+The function writes the result of the passed in debugger function into the passed in file.  If the passed in command does not begin with po or p then 'po' will be prepended to the passed in commnd.
 
 ##### Usage :
     wf -f /tmp/lldb_cmds -c 'po self'
@@ -71,7 +69,7 @@
     -c the debugger command wrapped in single quotes('po self')
 
 ### view_in_xcode/vx
-    The function writes the result of the passed in debugger function into a temp file and opens it in xcode. If the passed in command does not begin with po or p then 'po' will be prepended to the passed in commnd.
+The function writes the result of the passed in debugger function into a temp file and opens it in xcode. If the passed in command does not begin with po or p then 'po' will be prepended to the passed in commnd.
 
 ##### Usage :
     vx json
