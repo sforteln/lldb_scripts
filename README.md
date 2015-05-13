@@ -1,5 +1,7 @@
 # LLDB scripts
 
+## Note Currently these commands don't work in swift projects but they do work with objc in Xcode 6.3
+
 ## Installation
 ---
 #### adding to .lldbinit
