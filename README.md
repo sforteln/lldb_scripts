@@ -19,7 +19,7 @@
 ## Frame utils
 ---
 ### print_stack_frame/psf
-This function prints the class and function for a frame from the current stack.  This allows you to log a frame from the stack that is not the current frame.  So you could see what called the method that is at the top of the stack witj
+This function prints the class and function for a frame from the current stack.  This allows you to log a frame from the stack that is not the current frame.  So you could see what called the method that is at the top of the stack with  
     psf -i 1 -p "called by "  
   
 #####Usage :
