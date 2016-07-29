@@ -9,6 +9,7 @@
 
 1. Clone the repo
 1. copy the .lldbinit file to your home dir or copy its contents to an existing .lldbinit file
+1. copy the python scrupts to ~/LLDB or change the paths at the end of .lldbinit
 1. restart lldb/xcode
 
 #### Manually import into lldb or xcode(from the lldb prompt in the debugger window)
