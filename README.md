@@ -77,3 +77,6 @@ The function writes the result of the passed in debugger function into a temp fi
 ##### Usage :
     vx json
 
+#### Other lldb resources
+[facebook/chisel](https://github.com/facebook/chisel)  
+[liyanage/lldb_utilities](https://github.com/liyanage/lldb_utilities)
